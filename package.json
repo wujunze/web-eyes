@@ -1,0 +1,18 @@
+{
+  "name": "web-eyes",
+  "version": "1.0.0",
+  "description": "WEB SERVER for fingerprint identification of a website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "simple",
+    "webScan"
+  ],
+  "author": "wujunze",
+  "license": "MIT",
+  "dependencies": {
+    "wappalyzer": "^5.1.3"
+  }
+}
