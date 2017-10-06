@@ -1,23 +1,21 @@
 'use strict';
 
+var express = require("express");
+var app = express();
+var hostName = '127.0.0.1';
+var port = 8080;
+
 const wappalyzer = require('wappalyzer');
 
-const args = process.argv.slice(2);
+app.get('/', function (req, res) {
+    var url = req.query.url;
+    console.warn(url);
+    wappalyzer.analyze(url, res)
+        .then(function (json) {
+            res.end(JSON.stringify(json));
+        });
+});
 
-const url = args[0] || '';
-
-if ( !url ) {
-    process.stderr.write('No URL specified\n');
-
-    process.exit(1);
-}
-
-wappalyzer.analyze(url)
-    .then(json => {
-    process.stdout.write(JSON.stringify(json) + '\n')
-
-process.exit();
-})
-.catch(error => {
-    throw error
+app.listen(port, hostName, function () {
+    console.log("应用实例，访问地址为 http://%s:%s", hostName, port)
 });

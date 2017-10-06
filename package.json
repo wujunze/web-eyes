@@ -11,8 +11,9 @@
     "webScan"
   ],
   "author": "wujunze",
-  "license": "MIT",
+  "license": "GPL",
   "dependencies": {
+    "express": "^4.16.1",
     "wappalyzer": "^5.1.3"
   }
 }
