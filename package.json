@@ -1,6 +1,6 @@
 {
   "name": "web-eyes",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "WEB SERVER for fingerprint identification of a website",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,14 @@
     "webScan"
   ],
   "author": "wujunze",
-  "license": "GPL",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+      "url": "git+https://github.com/wujunze/web-eyes.git"
+  },
   "dependencies": {
     "express": "^4.16.1",
     "wappalyzer": "^5.1.3"
   }
+  
 }
